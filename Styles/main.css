@@ -1,6 +1,12 @@
+body{
+	background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+}
+
 body, input, button{
 	font-family: 'Raleway', sans-serif;
 }
+
+/* <------ Header ------> */
 
 header{
 	width: 100%;
@@ -31,6 +37,9 @@ header input{
 	border-bottom-left-radius:5px;
   	box-shadow: none;
   	outline: none;
+
+  	-webkit-appearance: none;
+  	-moz-appearance: none;
   	appearance:none;
 }
 
@@ -45,5 +54,25 @@ header button{
 	background: rgb(255, 255, 255);
 	border: 0;
 	box-shadow: none;
+	cursor: pointer;
+
+	-webkit-appearance: none;
+	-moz-appearance: none;
 	appearance:none;
+}
+
+header input :: -webkit-input-placeholder{
+	color: rgba(255, 255, 255,0.75);
+}
+
+header input :: -moz-placeholder{
+	color: rgba(255, 255, 255,0.75);
+}
+
+button span{
+	font-size: 20px;
+	color: #1c7e9e;
+	text-indent: 10px;
+	top: 50%;
+	left: 50%;
 }
