@@ -1,0 +1,6 @@
+@media (max-device-width: 480px) and (orientation: portrait){
+	header{
+		width: 100%;
+		height: 18%;
+	}
+}
