@@ -69,11 +69,19 @@ header button{
 	appearance:none;
 }
 
-header input :: -webkit-input-placeholder{
+header input::-webkit-input-placeholder{
 	color: rgba(255, 255, 255,0.75);
 }
 
-header input :: -moz-placeholder{
+header input::-moz-input-placeholder{
+	color: rgba(255, 255, 255,0.75);
+}
+
+header input:-ms-input-placeholder{
+	color: rgba(255, 255, 255,0.75);
+}
+
+header input:-moz-input-placeholder{
 	color: rgba(255, 255, 255,0.75);
 }
 
