@@ -139,6 +139,7 @@ ul.ToDo li .Buttons button{
 	border: 0;
 	outline: none;
 	position: relative;
+	cursor: pointer;
 
 	-webkit-appearance: none;
   	-moz-appearance: none;
@@ -154,5 +155,24 @@ ul.ToDo li .Buttons button:last-of-type:before{
 	position: absolute;
 	top: 10px;
 	left: 0;
-	background: red;
+	background: rgb(148, 143, 142);
+}
+
+ul.ToDo li .Buttons button span{
+	font-size: 24px;
+	top: 50%;
+	left: 50%;
+	padding-right: 10px;
+}
+
+ul.ToDo li .Buttons button.Remove span{
+	color: rgb(222, 64, 40);
+}
+
+ul.ToDo li .Buttons button.Complete span{
+	color: rgb(130, 137, 148);
+}
+
+ul.ToDo#Completed li .Buttons button.Complete span{
+	color: rgb(29, 224, 116);
 }
