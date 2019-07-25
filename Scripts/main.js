@@ -13,6 +13,20 @@ document.getElementById('AddItem').addEventListener('click', function(){
 	}
 });
 
+// Function that allow change items to completed list or re-add to the to do list
+function completeItem() {
+	var item = this.parentNode.parentNode // li tag (Item)
+	var parent = item.parentNode;  // accessing the list
+	var id = parent.id; // Id of list
+
+	// Check if the item should be added to completed list or should be re-add to the to do list
+	// condition ? value_if_is_true : value_if_is_false
+	var target = (id === 'ToDo') ? document.getElementById('Completed') : document.getElementById('ToDo');
+
+	parent.removeChild(item);
+	target.insertBefore(item, target.childNodes[0]);	
+}
+
 // Function that allow remove items of list
 function removeItem() {
 	var item = this.parentNode.parentNode // li tag (Item)
@@ -20,10 +34,10 @@ function removeItem() {
 
 	$("body").overhang({
 	  type: "confirm",
-	  primary: "#40D47E",
-	  accent: "#27AE60",
+	  primary: "#ebae07",
+	  accent: "#c99400",
 	  yesColor: "#3498DB",
-	  message: "Do you want to continue?",
+	  message: "Do you want to remove this item?",
 	  callback: function (value) {
 	    var response = value ? "Yes" : "No";
 	    if (response == "Yes") {
@@ -51,6 +65,7 @@ function addItem(text) {
 	var complete = document.createElement('button');
 	complete.classList.add('Complete');
 	complete.innerHTML = '<span class="far fa-check-square"></span>';
+	complete.addEventListener('click', completeItem);	// Add click event for remove item
 
 	buttons.appendChild(remove);
 	buttons.appendChild(complete);

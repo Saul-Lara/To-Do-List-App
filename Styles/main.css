@@ -176,3 +176,18 @@ ul.ToDo li .Buttons button.Complete span{
 ul.ToDo#Completed li .Buttons button.Complete span{
 	color: rgb(29, 224, 116);
 }
+
+ul.ToDo#Completed:not(:empty){
+	padding: 60px 0 0 0;
+}
+
+ul.ToDo#Completed:not(:empty):before{
+	content: '';
+	width: 150px;
+	height: 1px;
+	background: white;
+	position: absolute;
+	top: 30px;
+	left: 50%;
+	margin: 0 0 0 -75px;
+}
