@@ -177,11 +177,12 @@ ul.ToDo#Completed li .Buttons button.Complete span{
 	color: rgb(29, 224, 116);
 }
 
-ul.ToDo#Completed:not(:empty){
+ul.ToDo#Completed{
 	padding: 60px 0 0 0;
+	position: relative;
 }
 
-ul.ToDo#Completed:not(:empty):before{
+ul.ToDo#Completed:before{
 	content: '';
 	width: 150px;
 	height: 1px;
@@ -190,4 +191,41 @@ ul.ToDo#Completed:not(:empty):before{
 	top: 30px;
 	left: 50%;
 	margin: 0 0 0 -75px;
+}
+
+ul.ToDo#ToDo:empty:after{
+	content: 'You have nothing to-do! 🤔';
+	margin: 15px 0 0 0;
+}
+
+ul.ToDo#Completed:empty:after{
+	content: 'You have yet to complete any tasks. 😢';
+}
+
+ul.ToDo#ToDo:after,ul.ToDo#Completed:after{
+	width: 100%;
+	display: block;
+	text-align: center;
+	font-size: 20px;
+	color: #1d86a3;
+}
+
+ul.ToDo#Delete{
+	padding: 60px 0 0 0;
+	position: relative;
+	text-align: center;
+
+}
+
+ul.ToDo#Delete button{
+	color: #1d86a3;
+	padding: 10px;
+	font-weight: 600;
+    font-size: 20px;
+	background: rgb(255, 255, 255);
+	border: 0;
+	outline: none;
+	position: relative;
+	cursor: pointer;
+	border-radius: 6px;
 }
