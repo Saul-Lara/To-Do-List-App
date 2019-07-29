@@ -7,9 +7,9 @@ This application allows us to save this tasks locally in the browser.
  
 ## Built With 🛠️
 ```
-:page_facing_up: Html
-:bookmark_tabs: CSS
-:memo: Javascript
+📄 Html
+📑 CSS
+📝 Javascript
 ```
 ## Setup 🔧
 Clone this repo to your desktop and open 🌎index.html in your browser to use it.
