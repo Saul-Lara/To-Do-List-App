@@ -3,7 +3,7 @@
 This is a To Do List App developed with Html, Css and Javascript that allows us to add tasks to have control over them.
 This application allows us to save this tasks locally in the browser.
 
-<div style="text-align:center"><img src="https://github.com/Saul-Lara/To-Do-List-App/blob/master/image.jpg"/></div>
+<p align="center"><img src="https://github.com/Saul-Lara/To-Do-List-App/blob/master/image.jpg"/></p>
  
 ## Built With 🛠️
 ```
